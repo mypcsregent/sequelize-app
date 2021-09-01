@@ -1,0 +1,38 @@
+http://Localhost:3000/
+
+###
+
+get http://Localhost:3000/Posts/
+###
+get http://Localhost:3000/Posts/14
+###
+
+
+post http://Localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title":"Post 15",
+    "body": "It is a nice post. I like it"
+}
+
+###
+
+get http://Localhost:3000/comments/
+###
+get http://Localhost:3000/comments/6
+###
+
+
+post http://Localhost:3000/comments
+Content-Type: application/json
+
+{
+    "title":"comment for post 6",
+    "body": "It is a nice post. I like it",
+    "username":"Dhananjai",
+    "postId":6
+}
+
+###
+delete http://Localhost:3000/comments/5

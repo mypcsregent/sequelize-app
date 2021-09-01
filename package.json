@@ -1,0 +1,19 @@
+{
+  "name": "sequelize-app",
+  "version": "1.0.0",
+  "description": "Use sequelize commands to create db, use migration files to create tables, use seed feature to insert data in to the tables.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
+  }
+}
