@@ -1,5 +1,4 @@
 const { Pool } = require('pg');
-const { post } = require('../routes/routes');
 
 const pool= new Pool({
     host:'localhost',
@@ -87,7 +86,17 @@ const deleteCommentById=async(req,res)=>{
 
 }
 
-
+const updatePost=async(req,res)=>{
+    const id=req.params.id;
+    const {title, body}= req.body;
+    const response = await pool.query('update posts set title =$1, body =$2 where id =$3',[title,body,id]);
+    if(response.rowCount>0){
+    
+        res.json(`Post ${id} updated successfully`);
+        }else{
+            res.json('Couldnot update post');
+        }
+}
 
 
 module.exports={
@@ -97,5 +106,6 @@ module.exports={
     getComments,
     getCommentsByPostId,
     createComment,
-    deleteCommentById
+    deleteCommentById,
+    updatePost
 }

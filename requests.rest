@@ -36,3 +36,12 @@ Content-Type: application/json
 
 ###
 delete http://Localhost:3000/comments/5
+
+###
+put http://localhost:3000/posts/20
+Content-Type: application/json
+
+{
+    "title":"Post 4",
+    "body": "I made the post to check put"
+}
